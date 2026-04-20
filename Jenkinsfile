@@ -3,21 +3,15 @@ pipeline {
 
     stages {
 
-        
-
         stage('Build Docker Image') {
             steps {
-                script {
-                    sh 'docker build -t python-app .'
-                }
+                bat 'docker build -t python-app .'
             }
         }
 
         stage('Run Container') {
             steps {
-                script {
-                    sh 'docker run -d -p 5000:5000 python-app'
-                }
+                bat 'docker run -d -p 5000:5000 python-app'
             }
         }
     }
