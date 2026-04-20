@@ -3,11 +3,7 @@ pipeline {
 
     stages {
 
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/Dharani882012/python-cicd-project.git'
-            }
-        }
+        
 
         stage('Build Docker Image') {
             steps {
