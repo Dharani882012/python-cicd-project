@@ -1,9 +1,5 @@
-FROM python:3.12
+FROM nginx:alpine
 
-WORKDIR /app
+COPY index.html /usr/share/nginx/html/index.html
 
-COPY . .
-
-RUN pip install flask
-
-CMD ["python", "app.py"]
+EXPOSE 80
